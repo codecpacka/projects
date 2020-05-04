@@ -1,0 +1,8 @@
+#menu{
+    display: inline-block;
+    float: left;
+}
+.hoverred:hover{
+background-color: rgba(255, 0, 0, 0.73);
+
+}
