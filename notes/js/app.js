@@ -80,14 +80,14 @@ function deletnote(index) {
 
 
 let search = document.getElementById('search');
-searchtxt = search.value;
 search.addEventListener('input', function () {
+    let searchtxt = search.value.toLowerCase();
     let notecard = document.getElementsByClassName('card');
     console.log(notecard);
     Array.from(notecard).forEach(function (element) {
         let txt = element.getElementsByTagName("p")[0].innerText;
         console.log(txt);
-        if (txt.includes(search.value)) {
+        if (txt.includes(searchtxt)) {
 
             element.style.display = "block";
         }
@@ -97,8 +97,6 @@ search.addEventListener('input', function () {
     })
 
 })
-
-
 
 
 
